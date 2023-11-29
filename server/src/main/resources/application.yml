@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: AirportService
+
+springdoc:
+  api-docs:
+    path: /api
+  swagger-ui:
+    path: /swagger-ui.html
+
+server:
+  port: 8000

@@ -1,0 +1,17 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %highlight(%-5level %d{yyyy-MM-dd HH:mm:ss.SSS} %logger{36}) %boldYellow(%thread) %boldMagenta(%replace(CID\(%X{CorrelationId}\)){'CID\(\)', ''}) %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <Logger name="com.klm.assignment.airports.server" level="debug">
+        <AppenderRef ref="Console"/>
+    </Logger>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
